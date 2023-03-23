@@ -1,5 +1,6 @@
 package com.dev.assignment
 
+import com.dev.assignment.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 

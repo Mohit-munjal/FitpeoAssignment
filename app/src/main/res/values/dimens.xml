@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="dimen_40dp">40dp</dimen>
-    <dimen name="dimen_20dp">20dp</dimen>
-    <dimen name="dimen_60dp">60dp</dimen>
-    <dimen name="dimen_2dp">2dp</dimen>
+
+    <dimen name="dimen_140dp">140dp</dimen>
+    <dimen name="dimen_16dp">16dp</dimen>
+    <dimen name="dimen_12dp">12dp</dimen>
     <dimen name="dimen_16sp">16sp</dimen>
+    <dimen name="dimen_4dp">4dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_12sp">12sp</dimen>
+    <dimen name="dimen_14sp">14sp</dimen>
+    <dimen name="dimen_2dp">2dp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
+    <dimen name="item_offset">5dp</dimen>
     <dimen name="dimen_10dp">10dp</dimen>
-    <dimen name="title_margin_top">50dp</dimen>
-    <dimen name="et_padding">10dp</dimen>
-    <dimen name="et_padding_left">10dp</dimen>
-    <dimen name="et_padding_top">20dp</dimen>
-    <dimen name="btn_submit_padding_vertical">10dp</dimen>
-    <dimen name="btn_submit_margintop">40dp</dimen>
-    <dimen name="text_size_button">15sp</dimen>
-    <dimen name="dimens_18sp">18sp</dimen>
-    <dimen name="dimens_40">40dp</dimen>
-    <bool name="portrait_only">true</bool>
 
 </resources>

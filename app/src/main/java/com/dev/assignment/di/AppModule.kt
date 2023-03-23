@@ -1,38 +1,28 @@
-package com.dev.assignment
+package com.dev.assignment.di
 
-
-import com.dev.assignment.communication.IUserFlagEventHandler
-import com.dev.assignment.communication.UserFlagEventHandler
-import com.dev.assignment.data.TMOAppContentProvider
-import com.dev.assignment.manager.DiagnosticConsentManager
-import com.dev.assignment.manager.IDiagnosticConsentManager
-import com.dev.assignment.module.DiagnosticConsentModule
-import com.dev.assignment.module.IDiagnosticConsentModule
+import android.app.Application
+import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestManager
+import com.bumptech.glide.request.RequestOptions
+import com.dev.assignment.utils.Constants
+import com.dev.assignment.R
 import dagger.Module
 import dagger.Provides
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Singleton
 
 @Module
 object AppModule {
 
 
     @JvmStatic
+    @Singleton
     @Provides
-    fun provideUserFlagEventHandler(): IUserFlagEventHandler = UserFlagEventHandler()
-
-    @JvmStatic
-    @Provides
-    fun provideTMOAppContentProvider(userFlagEventHandler: IUserFlagEventHandler) = TMOAppContentProvider(userFlagEventHandler)
-
-    @JvmStatic
-    @Provides
-    fun provideTMOAppDataReceiver(tmoAppContentProvider: TMOAppContentProvider) = tmoAppContentProvider.TMOAppDataReceiver()
-
-    @JvmStatic
-    @Provides
-    fun provideDiagnosticConsentManager(tmoAppContentProvider: TMOAppContentProvider, tmoAppDataReceiver: TMOAppContentProvider.TMOAppDataReceiver): IDiagnosticConsentManager = DiagnosticConsentManager(tmoAppContentProvider,tmoAppDataReceiver)
-
-    @JvmStatic
-    @Provides
-    fun provideDiagnosticConsentModule(diagnosticConsentManager: DiagnosticConsentManager): IDiagnosticConsentModule = DiagnosticConsentModule(diagnosticConsentManager)
-
+    fun getRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(Constants.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
 }
